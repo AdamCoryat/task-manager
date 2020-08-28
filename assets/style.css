@@ -1,0 +1,23 @@
+body {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column; 
+}
+
+header{
+  min-height: 9vh;
+} 
+
+main{
+ flex-grow: 1;
+} 
+
+
+footer{
+  min-height: 6vh;
+
+}
+
+.card-size{
+  min-height: 40vh;
+}

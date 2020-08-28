@@ -1,10 +1,36 @@
 import { generateId } from "../utils.js";
 
 export default class List {
-  constructor(data) {
-    //TODO Your constructor takes in a data object that should have the properties you need to create your list here is a freebie, it will set the id its provided, or if that is undefined it will create a new one (this is an alternative to object destructuring)
-    this.id = data.id || generateId();
+  constructor({title, task, id}) {
+    this.title = title
+    this.task = task || []
+    this.id = id || generateId();
   }
-  //Be sure to add the methods needed to create the view template for this model
-  //For starting out, your tasks may be strings alone, but later you may wish to turn them into full objects, that will be up to you
+
+get Template(){
+  return ` <div class="col-2 card m-2 ">
+  <div class="card-body bg-primary">
+    <h5 class="card-title text-center text-light">${this.title}</h5>
+  </div>
+  <div id="task" class="card-size">
+  <ul>${this.taskTemplate}</ul>
+  </div>
+  <form onsubmit="app.listController.addTask(event, '${this.id}')">
+  <div class="form-group">
+                    <textarea class="form-control" id="task" placeholder="Enter your task..." type="task"></textarea>
+                </div>
+    <div class="text-left">
+      <button  type="submit" class="btn btn-outline-primary" >+ Task</button>
+      <button class="btn btn-outline-danger" onclick="app.listController.deleteList('${this.id}')">Delete List</button>
+                </div>
+                </form>
+</div>`
+}
+get taskTemplate() {
+  let template = ""
+  this.task.forEach(t => {
+    template += `<a href="#" onclick="app.listController.deleteTask('${this.id}', '${t}')">delete</a><li class="p-1 my-1">${t}</li>`
+  })
+  return template
+}
 }
