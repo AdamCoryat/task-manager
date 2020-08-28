@@ -31,15 +31,20 @@ export default class ListController {
     _drawLists()
   }
   deleteTask(id, task) {
+    confirm("Delete Task?")
     ListService.deleteTask(id, task)
     _drawLists()
+    
   }
+  
 
   createList(event) {
     event.preventDefault();
     let form = event.target
     let newList = {
-      title: form.title.value
+      title: form.title.value,
+      // @ts-ignore
+      color: document.getElementById("myColor").value
     }
     ListService.createList(newList)
     form.reset()
@@ -47,6 +52,7 @@ export default class ListController {
   }
 
   deleteList(id) {
+    confirm("Delete List")
     ListService.deletePost(id)
     _drawLists()
   }

@@ -5,11 +5,13 @@ body {
 }
 
 header{
-  min-height: 9vh;
+  min-height: 5vh;
 } 
 
 main{
  flex-grow: 1;
+ background: #f5f1da;
+ 
 } 
 
 
@@ -20,4 +22,13 @@ footer{
 
 .card-size{
   min-height: 40vh;
+}
+
+.gradiant-bg{
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.card-bg{
+  background-image: url("/assets/paperBG.jpg");
 }

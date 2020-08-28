@@ -12,13 +12,14 @@
 
   <body>
 <header>
-      <nav class="container-fluid navbar navbar-light bg-primary">
+      <nav class="container-fluid navbar navbar-light gradiant-bg">
         <a class="navbar-brand text-light" href="#"><i class="fa fa-list-alt" aria-hidden="true"></i>
           List It!
         </a>
         <form class="form-inline" onsubmit="app.listController.createList(event)">
           <input class="form-control mr-sm-2" id="title" type="title" placeholder="List Title..." aria-label="List Title">
-          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Create</button>
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit" onclick="app.listController.colorSet()">Create</button>
+          <input type="color" id="myColor" value="#ff0080">
         </form>
       </nav>
 </header>
@@ -30,9 +31,9 @@
   </div>
 </main>
 
-<footer class="container-fluid text-center bg-primary">
+<footer class="container-fluid text-center gradiant-bg">
   <div class="row">
-    <div class="col">
+    <div class="col text-light">
       <h5>Made with love by A.D.D Designs LLC</h5>
 
     </div>
