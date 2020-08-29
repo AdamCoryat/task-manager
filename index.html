@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/style.css" />
-    <title>Task Manager</title>
-  </head>
 
-  <body>
-<header>
-      <nav class="container-fluid navbar navbar-light gradiant-bg">
-        <a class="navbar-brand text-light" href="#"><i class="fa fa-list-alt" aria-hidden="true"></i>
-          List It!
-        </a>
-        <form class="form-inline" onsubmit="app.listController.createList(event)">
-          <input class="form-control mr-sm-2" id="title" type="title" placeholder="List Title..." aria-label="List Title">
-          <button class="btn btn-outline-light my-2 my-sm-0" type="submit" onclick="app.listController.colorSet()">Create</button>
-          <input type="color" id="myColor" value="#ff0080">
-        </form>
-      </nav>
-</header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Patrick+Hand&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/style.css" />
+  <title>List It</title>
+</head>
 
-<main class="container-fluid">
-  <div class="row" id="listBody">   
-  </div>
-  <div class="row">
-  </div>
-</main>
+<body>
+  <header>
+    <nav class="container-fluid navbar navbar-light gradiant-bg">
+      <a class="navbar-brand text-light logo-font" href="#"><i class="fa fa-list-alt" aria-hidden="true"></i>
+        List It!
+      </a>
+      <form class="form-inline mx-2" onsubmit="app.listController.createList(event)">
+        <h5 class="mx-2 task-font">Pick Color</h5>
+        <input class="mx-2" type="color" id="myColor" value="#ff0080">
+        <input class="form-control mr-sm-2 input-font" id="title" type="title" placeholder="List Title..."
+          aria-label="List Title">
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit"
+          onclick="app.listController.colorSet()">Create</button>
+      </form>
+    </nav>
+  </header>
 
-<footer class="container-fluid text-center gradiant-bg">
-  <div class="row">
-    <div class="col text-light">
-      <h5>Made with love by A.D.D Designs LLC</h5>
-
+  <main class="container-fluid">
+    <div class="row justify-content-center d-flex" id="listBody">
     </div>
-  </div>
-</footer>
+    <div class="row">
+    </div>
+  </main>
 
+  <footer class="container-fluid text-center gradiant-bg">
+    <div class="row">
+      <div class="col text-light">
+        <h5>Made with love by A.D.D Designs LLC</h5>
 
-    <script src="app/main.js" type="module"></script>
-  </body>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="app/main.js" type="module"></script>
+</body>
+
 </html>
