@@ -7,7 +7,7 @@ body {
 
 main {
   flex-grow: 1;
-  background-image: url("/assets/corkboard.jpg");
+  background-image: url("corkboard.jpg");
   background-size: contain;
   background-position: center;
 
@@ -70,7 +70,7 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 .card-bg {
-  background-image: url("/assets/paperBG.jpg");
+  background-image: url("paperBG.jpg");
 }
 
 .b-shadow {
