@@ -18,7 +18,7 @@ export default class List {
   get Template() {
     return ` <div class="col-12 col-md-2 m-2 card card-bg shadow">
   <div class="card-body d-inline" style="background-color:${this.color}">
-  <img class="tack-size" src="../tack.png">
+  < img class = "tack-size" src ="./assets/tack.png">
   <a class="text-right" onclick="app.listController.deleteList('${this.id}')">X</a>
     <h3 class="card-title-font card-title text-center text-light">${this.title}</h3>
   </div>
