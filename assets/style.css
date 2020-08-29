@@ -34,8 +34,8 @@ input[type="color"]::-webkit-color-swatch {
   border: none;
 }
 
-.tack-size {
-  height: 5vh;
+.trash-can {
+  font-size: 2em;
 }
 
 .card-title-font {
