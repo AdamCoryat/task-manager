@@ -21,11 +21,11 @@
         List It!
       </a>
       <form class="form-inline mx-2" onsubmit="app.listController.createList(event)">
-        <h5 class="mx-2 task-font">Pick Color</h5>
+        <h5 class="mx-2 task-font text-light">Pick Color</h5>
         <input class="mx-2" type="color" id="myColor" value="#ff0080">
         <input class="form-control mr-sm-2 input-font" id="title" type="title" placeholder="List Title..."
           aria-label="List Title">
-        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit"
+        <button class="btn btn-success my-2 my-sm-0" type="submit"
           onclick="app.listController.colorSet()">Create</button>
       </form>
     </nav>
