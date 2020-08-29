@@ -1,77 +1,78 @@
 body {
-   min-height: 100vh;
-   display: flex;
-   flex-direction: column; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 
-main{
- flex-grow: 1;
- background-image: url("/assets/corkboard.jpg");
- background-size: contain;
- background-position: center;
- 
-} 
+main {
+  flex-grow: 1;
+  background-image: url("/assets/corkboard.jpg");
+  background-size: contain;
+  background-position: center;
+
+}
 
 
-footer{
+footer {
   min-height: 6vh;
 
 }
 
 input[type="color"] {
-	-webkit-appearance: none;
-	border: none;
-	width: 32px;
+  -webkit-appearance: none;
+  border: none;
+  width: 32px;
   height: 32px;
 }
+
 input[type="color"]::-webkit-color-swatch-wrapper {
-	padding: 0;
+  padding: 0;
 }
+
 input[type="color"]::-webkit-color-swatch {
-	border: none;
+  border: none;
 }
 
-.tack-size{
-  height: 5vh; 
+.tack-size {
+  height: 5vh;
 }
 
-.card-title-font{
+.card-title-font {
   font-size: 3em;
   font-family: 'Permanent Marker', cursive;
 }
 
-.input-font{
+.input-font {
   font-family: 'Permanent Marker', cursive;
 
 }
 
-.task-font{
+.task-font {
   font-weight: 600;
   font-size: 1.5rem;
   font-family: 'Patrick Hand', cursive
-  
 }
 
-.logo-font{
+.logo-font {
   font-size: 3em;
   font-family: 'Fredericka the Great', cursive;
 
 }
 
-.card-size{
+.card-size {
   min-height: 30vh;
 }
 
-.gradiant-bg{
-  background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+.gradiant-bg {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
 }
 
-.card-bg{
+.card-bg {
   background-image: url("/assets/paperBG.jpg");
 }
 
-.b-shadow{
-  box-shadow:         3px 3px 5px 6px #ccc;
+.b-shadow {
+  box-shadow: 3px 3px 5px 6px #ccc;
 }

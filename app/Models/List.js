@@ -1,7 +1,14 @@
-import { generateId } from "../utils.js";
+import {
+  generateId
+} from "../utils.js";
 
 export default class List {
-  constructor({ title, task, id, color }) {
+  constructor({
+    title,
+    task,
+    id,
+    color
+  }) {
     this.title = title
     this.task = task || []
     this.id = id || generateId()
