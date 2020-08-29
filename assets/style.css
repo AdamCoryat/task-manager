@@ -7,7 +7,7 @@ body {
 
 main {
   flex-grow: 1;
-  background-image: url("https://github.com/AdamCoryat/task-manager/blob/master/assets/corkboard.jpg");
+  background-image: url("./corkboard.jpg");
   background-size: contain;
   background-position: center;
 
