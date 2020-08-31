@@ -84,7 +84,7 @@ export default class ListController {
           swal("Boom! Your list has been destroyed", {
             icon: "success",
           });
-          ListService.deletePost(id)
+          ListService.deleteList(id)
           _drawLists()
         } else {
           swal("Your list is safe");
