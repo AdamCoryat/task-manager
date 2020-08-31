@@ -3,6 +3,7 @@ import {
 } from "../utils.js";
 
 export default class List {
+  //creates the class object list from the constructor.
   constructor({
     title,
     task,
@@ -15,6 +16,7 @@ export default class List {
     this.color = color
   }
 
+  //creates list template
   get Template() {
     return ` <div class="col-12 col-md-2 m-2 card card-bg shadow">
   <div class="card-body d-inline" style="background-color:${this.color}">
@@ -33,6 +35,7 @@ export default class List {
                 </form>
 </div>`
   }
+  //creates task template
   get taskTemplate() {
     let template = ""
     this.task.forEach(t => {

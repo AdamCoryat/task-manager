@@ -1,7 +1,9 @@
 import ListService from "../Services/ListService.js";
 import STORE from "../store.js"
 
-//TODO Don't forget to render to the screen after every data change.
+
+
+// Takes the class arrray and draws each one to html from the template located in the module List.js
 function _drawLists() {
   let template = ""
   STORE.State.lists.forEach(p => template += p.Template)
@@ -20,7 +22,6 @@ export default class ListController {
   }
 
   //This takes the intail input from the user from the task form and converts it into an object and sends it to service.
-
   addTask(event, id) {
     event.preventDefault()
     let form = event.target
@@ -31,6 +32,8 @@ export default class ListController {
     _drawLists()
   }
 
+
+  //This asks if you want to delete then sends to service and redraws after the service is compelete.
   deleteTask(id, task) {
     swal({
       title: "Are you sure?",
@@ -53,7 +56,7 @@ export default class ListController {
 
   }
 
-
+// takes in an event from the user then sends the raw data to be created into a class in services
   createList(event) {
     event.preventDefault();
     let form = event.target
@@ -67,6 +70,7 @@ export default class ListController {
     _drawLists()
   }
 
+//this asks if you want to delete the task then sends it to service to be deleted and redraws.
   deleteList(id) {
     swal({
       title: "Are you sure?",

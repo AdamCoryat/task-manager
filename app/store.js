@@ -25,7 +25,7 @@ class Store {
     return _state;
   }
 
-  //NOTE call saveState everytime you change the state in any way
+  //Saves the object into a string and stores in local storage
   saveState() {
     localStorage.setItem("TaskMaster", JSON.stringify(_state));
   }
